@@ -6,7 +6,8 @@
     "baseUrl": "./src/",
     "paths": {
       "pods": ["./pods/*"],
-      "scenes": ["./scenes/*"]
+      "scenes": ["./scenes/*"],
+      "core": ["./core/*"]
     },
     "declaration": false,
     "noImplicitAny": false,

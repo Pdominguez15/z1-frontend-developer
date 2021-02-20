@@ -1,6 +1,9 @@
 import React from "react";
-import { InitialScene } from "scenes/principal";
-
+import { RouterComponent } from "core/router";
 export const App: React.FunctionComponent = () => {
-  return <InitialScene />;
+  return (
+    <>
+      <RouterComponent />
+    </>
+  );
 };

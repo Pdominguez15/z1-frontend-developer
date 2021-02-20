@@ -12,6 +12,7 @@ module.exports = {
     alias: {
       scenes: path.resolve(__dirname, "./src/scenes/"),
       pods: path.resolve(__dirname, "./src/pods/"),
+      core: path.resolve(__dirname, "./src/core/"),
     },
     extensions: [".js", ".ts", ".tsx"],
   },
@@ -59,7 +60,7 @@ module.exports = {
         use: [MiniCSSExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|svg|jpg)$/,
         exclude: /node_modules/,
         loader: "url-loader?limit=5000",
         options: {
