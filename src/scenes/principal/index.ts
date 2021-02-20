@@ -1,1 +1,1 @@
-export * from "./principal.scene";
+export * from "./initial.scene";

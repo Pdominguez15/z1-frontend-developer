@@ -1,4 +1,17 @@
-html,
-body {
-  background-color: #dddd;
+//Reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//Font
+$font: "Roboto", sans-serif;
+
+//Color
+$principal-color: #2f0079;
+
+// Here's the export you add.
+:export {
+  principalFont: $font;
+  principalColor: $principal-color;
 }

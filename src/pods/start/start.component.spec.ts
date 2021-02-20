@@ -1,4 +1,4 @@
-describe("pods/initial/initial.component specs", () => {
+describe("pods/start/start.component specs", () => {
   it("true", () => {
     // Arrange
     // Act
