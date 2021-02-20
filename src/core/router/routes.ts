@@ -1,9 +1,9 @@
 interface SwitchRoutes {
   root: string;
-  scaner: string;
+  scanner: string;
 }
 
 export const switchRoutes: SwitchRoutes = {
   root: "/",
-  scaner: "/scaner",
+  scanner: "/scanner",
 };

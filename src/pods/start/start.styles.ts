@@ -13,7 +13,7 @@ export const h1 = css`
   font-size: 21px;
   line-height: 24px;
   letter-spacing: 0;
-  padding: 1em;
+  margin: 1em;
 `;
 
 export const header = css`
@@ -21,7 +21,7 @@ export const header = css`
 `;
 
 export const container = css`
-  padding: 2em 1.5em 0.5em 1.5em;
+  margin: 2em 1.5em 0.5em 1.5em;
   display: flex;
   flex-direction: column;
 `;
@@ -36,7 +36,7 @@ export const h2 = css`
 `;
 
 export const text = css`
-  padding-top: 1em;
+  margin-top: 1em;
   font-family: ${styles.principalFont};
   font-size: 16px;
   letter-spacing: 0;
@@ -45,7 +45,7 @@ export const text = css`
 `;
 
 export const imageContainer = css`
-  margin-top: 3em;
+  margin-top: 2em;
   display: flex;
   position: relative;
   padding: 1.5em;

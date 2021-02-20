@@ -1,6 +1,7 @@
 import React from "react";
 
-const imagen = require("../../assets/personalCard.svg");
+const image = require("../../assets/personalCard.svg");
+
 //CSS
 import * as classes from "./start.styles";
 
@@ -22,7 +23,7 @@ export const StartComponent: React.FunctionComponent<Props> = (props) => {
           information.
         </p>
         <div className={classes.imageContainer}>
-          <img src={imagen} />
+          <img src={image} />
           <button className={classes.button} onClick={onTakePicture}>
             TAKE PICTURE
           </button>

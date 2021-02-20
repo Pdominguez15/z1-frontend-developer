@@ -1,2 +1,2 @@
 export * from "./initial.scene";
-export * from "./scaner.scene";
+export * from "./scanner.scene";

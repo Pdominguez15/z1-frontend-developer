@@ -1,4 +1,4 @@
-describe("pods/start/start.component specs", () => {
+describe("pods/camera/camera.component specs", () => {
   it("true", () => {
     // Arrange
     // Act
