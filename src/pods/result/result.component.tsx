@@ -7,6 +7,8 @@ import { MyContext } from "common-app/context";
 //CSS
 import * as classes from "./result.styles";
 
+import { HeaderComponent } from "common-app/components/header";
+
 interface Props {
   onTakePicture: () => void;
 }
@@ -22,48 +24,39 @@ export const ResultComponent: React.FunctionComponent<Props> = (props) => {
 
   return (
     <>
-      <div className={classes.header}>
-        <h1 className={classes.h1}>BankClient</h1>
-      </div>
-      <div className={classes.container}>
-        <h2 className={classes.h2}>Scan your ID</h2>
-        <p className={classes.text} role="paragraph">
-          Take a picture. It may take time to validate your personal
-          information.
-        </p>
-        <div className={classes.containerResult}>
-          <div
-            className={cx(
-              classes.imageContainer,
-              bankContext.status
-                ? classes.imageContainerValid
-                : classes.imageContainerInvalid
-            )}
-          >
-            <img src={bankContext.image} />
-            {!bankContext.status && (
-              <button className={classes.button} onClick={onTakePicture}>
-                RETAKE PICTURE
-              </button>
-            )}
-          </div>
-          {bankContext.status && (
-            <div className={cx(classes.result, classes.accepted)}>
-              <div>
-                <img src={valid} />
-              </div>
-              <p role="paragraph">ACCEPTED</p>
-            </div>
+      <HeaderComponent />
+      <div className={classes.containerResult}>
+        <div
+          className={cx(
+            classes.imageContainer,
+            bankContext.status
+              ? classes.imageContainerValid
+              : classes.imageContainerInvalid
           )}
+        >
+          <img src={bankContext.image} />
           {!bankContext.status && (
-            <div className={cx(classes.result, classes.rejected)}>
-              <div>
-                <img src={invalid} />
-              </div>
-              <p role="paragraph">REJECTED</p>
-            </div>
+            <button className={classes.button} onClick={onTakePicture}>
+              RETAKE PICTURE
+            </button>
           )}
         </div>
+        {bankContext.status && (
+          <div className={cx(classes.result, classes.accepted)}>
+            <div>
+              <img src={valid} />
+            </div>
+            <p role="paragraph">ACCEPTED</p>
+          </div>
+        )}
+        {!bankContext.status && (
+          <div className={cx(classes.result, classes.rejected)}>
+            <div>
+              <img src={invalid} />
+            </div>
+            <p role="paragraph">REJECTED</p>
+          </div>
+        )}
       </div>
     </>
   );
