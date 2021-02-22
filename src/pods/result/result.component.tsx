@@ -20,10 +20,6 @@ export const ResultComponent: React.FunctionComponent<Props> = (props) => {
   //Context
   const bankContext = React.useContext(MyContext);
 
-  React.useEffect(() => {
-    console.log(bankContext);
-  });
-
   return (
     <>
       <div className={classes.header}>
@@ -56,7 +52,7 @@ export const ResultComponent: React.FunctionComponent<Props> = (props) => {
               <div>
                 <img src={valid} />
               </div>
-              <p>ACCEPTED</p>
+              <p role="paragraph">ACCEPTED</p>
             </div>
           )}
           {!bankContext.status && (
@@ -64,7 +60,7 @@ export const ResultComponent: React.FunctionComponent<Props> = (props) => {
               <div>
                 <img src={invalid} />
               </div>
-              <p>REJECTED</p>
+              <p role="paragraph">REJECTED</p>
             </div>
           )}
         </div>

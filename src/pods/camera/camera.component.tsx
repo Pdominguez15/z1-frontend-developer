@@ -54,8 +54,12 @@ export const CameraComponent: React.FunctionComponent<Props> = (props) => {
     <>
       <div className={classes.container}>
         <h1 className={classes.h1}>Take picture</h1>
-        <p className={classes.text}>Fit your ID card inside the frame.</p>
-        <p className={classes.text}>The picture will be taken automatically.</p>
+        <p className={classes.text} role="paragraph">
+          Fit your ID card inside the frame.
+        </p>
+        <p className={classes.text} role="paragraph">
+          The picture will be taken automatically.
+        </p>
         <div
           className={cx(
             classes.cameraContainer,
@@ -64,19 +68,28 @@ export const CameraComponent: React.FunctionComponent<Props> = (props) => {
               : classes.cameraContainerInvalid
           )}
         >
-          <Webcam audio={false} ref={webcamRef} screenshotFormat="image/jpeg" />
+          <Webcam
+            audio={false}
+            ref={webcamRef}
+            screenshotFormat="image/jpeg"
+            role="video"
+          />
         </div>
         <div className={classes.message}>
           {!isValid && (
             <>
               <img src={light}></img>
-              <p className={classes.textMessage}>Room lighting is too low</p>
+              <p className={classes.textMessage} role="paragraph">
+                Room lighting is too low
+              </p>
             </>
           )}
           {isValid && (
             <>
               <img src={check}></img>
-              <p className={classes.textMessage}>Picture taken!</p>
+              <p className={classes.textMessage} role="paragraph">
+                Picture taken!
+              </p>
             </>
           )}
         </div>

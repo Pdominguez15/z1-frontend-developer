@@ -3,7 +3,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { StartComponent } from "./start.component";
 
-describe("pods/bar-info/bar-info.component specs", () => {
+describe("pods/start/start.component specs", () => {
   it("should display information when it is render", () => {
     // Arrange
     const props = {
@@ -28,6 +28,7 @@ describe("pods/bar-info/bar-info.component specs", () => {
     expect(image).toBeInTheDocument();
     expect(button).toBeInTheDocument();
   });
+
   it("should call onTakePicture property when it click on 'TAKE PICTURE' button", () => {
     // Arrange
     const props = {
