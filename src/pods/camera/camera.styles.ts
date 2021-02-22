@@ -34,12 +34,19 @@ export const text = css`
 export const cameraContainer = css`
   height: 200px;
   margin-top: 4em;
-  border: 2px solid red;
   border-radius: 20px;
   overflow: auto;
   video {
     width: 100%;
   }
+`;
+
+export const cameraContainerValid = css`
+  border: 2px solid green;
+`;
+
+export const cameraContainerInvalid = css`
+  border: 2px solid red;
 `;
 
 export const buttonContainer = css`

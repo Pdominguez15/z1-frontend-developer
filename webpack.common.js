@@ -13,6 +13,7 @@ module.exports = {
       scenes: path.resolve(__dirname, "./src/scenes/"),
       pods: path.resolve(__dirname, "./src/pods/"),
       core: path.resolve(__dirname, "./src/core/"),
+      "common-app": path.resolve(__dirname, "./src/common-app/"),
     },
     extensions: [".js", ".ts", ".tsx"],
   },
